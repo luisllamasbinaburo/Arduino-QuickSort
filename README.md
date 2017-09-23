@@ -1,5 +1,5 @@
 # Librería Arduino QuickSort
-Una librería para Arduino que aplica el algoritmo QuickSort para ordenar un array en Arduino.
+Librería para Arduino que aplica el algoritmo QuickSort para ordenar un array en Arduino. <br />
 Más información https://www.luisllamas.es/libreria-arduino-quicksort/
 
 ## Instrucciones de uso
@@ -15,7 +15,7 @@ QuickSort<int>::SortAscending(items, initItem, numItems);
 
 Mientras que para la ordenación en sentido descendente usaríamos el método SortDescending.
 ```c++
-Mientras que para la ordenación en sentido descendente usaríamos el método SortDescending.
+QuickSort<int>::SortDescending(items, initItem, numItems);
 ```
 
 ## Ejemplos
