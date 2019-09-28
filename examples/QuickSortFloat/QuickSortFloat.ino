@@ -27,7 +27,7 @@ void setup()
 
 	Serial.println("Ordenando 100 integers");
 	unsigned long timeCount = micros();
-	QuickSort<float>::SortAscending(values100, 0, values100Length - 1);
+	QuickSort::SortAscending(values100, 0, values100Length - 1);
 	timeCount = micros() - timeCount;
 	printArray(values100, values100Length);
 	Serial.println();
