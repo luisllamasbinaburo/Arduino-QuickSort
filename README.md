@@ -10,12 +10,12 @@ La librería incorpora dos métodos estáticos para el calculo de QuickSort asce
 Para la ordenación en sentido ascendente usaríamos el método SortAscending.
 
 ```c++
-QuickSort<int>::SortAscending(items, initItem, numItems);
+QuickSort::SortAscending(items, initItem, numItems);
 ```
 
 Mientras que para la ordenación en sentido descendente usaríamos el método SortDescending.
 ```c++
-QuickSort<int>::SortDescending(items, initItem, numItems);
+QuickSort::SortDescending(items, initItem, numItems);
 ```
 
 ## Ejemplos
@@ -42,7 +42,7 @@ void setup()
 
 	Serial.println("Ordenando 100 integers");
 	unsigned long timeCount = micros();
-	QuickSort<int>::SortAscending(values100, 0, values100Length - 1);
+	QuickSort::SortAscending(values100, 0, values100Length - 1);
 	timeCount = micros() - timeCount;
 	printArray(values100, values100Length);
 	Serial.println();
@@ -78,7 +78,7 @@ void setup()
 
 	Serial.println("Ordenando 100 integers");
 	unsigned long timeCount = micros();
-	QuickSort<float>::SortAscending(values100, 0, values100Length - 1);
+	QuickSort::SortAscending(values100, 0, values100Length - 1);
 	timeCount = micros() - timeCount;
 	printArray(values100, values100Length);
 	Serial.println();
