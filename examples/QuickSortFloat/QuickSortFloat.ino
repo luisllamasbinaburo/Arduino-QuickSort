@@ -5,6 +5,11 @@ Copyright (c) 2017 Luis Llamas
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License
+
+UPDATES:
+2020/08/22:1006>
+          error fix: Added type to templated declaration (Orlando S. Hoilett)
+          Also print values before ordering to compare (Orlando S. Hoilett)
  ****************************************************/
 
 #include "QuickSortLib.h"
@@ -25,9 +30,14 @@ void setup()
 {
 	Serial.begin(115200);
 
+  Serial.println("Antes de ordenando");
+  printArray(values100, values100Length);
+  Serial.println();
+  Serial.println();
+
 	Serial.println("Ordenando 100 integers");
 	unsigned long timeCount = micros();
-	QuickSort::SortAscending(values100, 0, values100Length - 1);
+	QuickSort<float>::SortAscending(values100, 0, values100Length - 1);
 	timeCount = micros() - timeCount;
 	printArray(values100, values100Length);
 	Serial.println();
